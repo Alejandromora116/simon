@@ -7,19 +7,31 @@
 //
 
 import UIKit
+    import AVFoundation
 
 class ViewController: UIViewController {
 
+    @IBOutlet var colorDisplays: [UIView]!
+    @IBOutlet weak var onStartButtonTapped: UIButton!
+    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var colorsFrame: UIView!
+    
+    var sound: AVAudioPlayer?
+    var timer = Timer()
+    var pattern = [Int]()
+    var index = 0
+    var playerTurn = false
+    var gameOver = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
-    @IBOutlet var greenColorViews: [UIView]!
-    @IBOutlet var redColorViews: [UIView]!
-    @IBOutlet var yellowColorViews: [UIView]!
-    @IBOutlet var blueColorViews: [UIView]!
+    func playSound(fileName: String){
+        if let path = Bundle.main.path
+    }
     
-    @IBOutlet weak var onStartButtonTapped: UIButton!
+    
     
     @IBAction func onTap(_ sender: UITapGestureRecognizer) {
     }
